@@ -4,6 +4,7 @@
 
 #include "json/json.h"
 #include "Bubble-Sort.h"
+#include "Selection-Sort.h"
 
 int main(int argc, char* argv[]) {
 	std::ifstream data("/Data/data_sets.json")
@@ -17,6 +18,7 @@ int main(int argc, char* argv[]) {
 
 	for(const i : data) {
 		std::cout << bubble_Sort(i) << std::endl;
+		std::cout << selection_Sort(i) << std::endl;
 	}
 
     return 0;
