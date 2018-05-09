@@ -1,6 +1,8 @@
 #include <iostream>
 
 void bubble_Sort(int d[]) {
+	d[] = data;
+	
 	for(int a=0; a < data.length() + 1; a++) {
 		for(int b=1; b < data.length() + 1; b++) {
 			if(data[a] > data[b]) { 
@@ -13,5 +15,6 @@ void bubble_Sort(int d[]) {
 }
 
 int main(int argc, char* argv[]) {
+
     return 0;
 }
