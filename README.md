@@ -13,6 +13,15 @@ I am trying to learn how to implement Sorting-Algorithms
 | Merge-Sort           | O(n*log(n)) | O(n*log(n)) | O(n*log(n)) | Depends  | Stable    |
 | Quick-sort           | O(n*log(n)) | O(n*log(n)) | O(n^2)      | Constant | Stable    |
 
+Big O - Upper Bound
+    - "f(n) = O(g(n))"
+
+Big theta - middle ("tight") Bound
+    - f(n) = Ω(g(n))
+
+Big Omega - Lower Bound
+    - "f(n) = Θ(g(n))"
+
 ## Remarks
 
 * Bubble Sort
