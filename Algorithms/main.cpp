@@ -15,6 +15,7 @@
 #include "Bubble_Sort.h"
 #include "Selection_Sort.h"
 #include "Insertion_Sort.h"
+#include "Quick_Sort.h"
 
 using json = nlohmann::json;
 std::ifstream data("/Data/data_sets.json");
@@ -30,6 +31,7 @@ int main(int argc, char * argv[]) {
     bubble_sort(&data_arr_one);
     selection_sort(&data_arr_one);
     insertion_sort(&data_arr_one);
+    quick_sort(&data_arr_one);
     
     return 0;
 }
