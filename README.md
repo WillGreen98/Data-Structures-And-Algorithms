@@ -1,4 +1,6 @@
-# Sorting-Algorithms
+# Data Structures and Algorithms
+
+## Sorting-Algorithms
 
 Sorting-Algorithms For CS Theory
 I am trying to learn how to implement Sorting-Algorithms
