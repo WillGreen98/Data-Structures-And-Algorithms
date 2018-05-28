@@ -413,3 +413,4 @@ xcuserdata/
 !.vscode/launch.json
 !.vscode/extensions.json
 *.json
+*.txt
