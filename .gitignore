@@ -414,3 +414,6 @@ xcuserdata/
 !.vscode/extensions.json
 *.json
 *.txt
+
+.idea/*
+*.txt
