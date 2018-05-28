@@ -4,22 +4,21 @@ project(Data_Structures_and_Algorithms)
 set(CMAKE_CXX_STANDARD 11)
 
 include_directories(.)
-include_directories(Searching-Algorithms)
-include_directories(Searching-Algorithms/Algorithms)
+include_directories(Sedarch-Algorithms)
+include_directories(Sedarch-Algorithms/Algorithms)
 include_directories(Sorting-Algorithms)
 include_directories(Sorting-Algorithms/Algorithms)
 include_directories(Sorting-Algorithms/cmake-build-debug)
 include_directories(Sorting-Algorithms/Data)
 
 add_executable(Data_Structures_and_Algorithms
-        Searching-Algorithms/Algorithms/Binary_Search.cpp
-        Searching-Algorithms/Algorithms/Binary_Search.h
-        Searching-Algorithms/Algorithms/Linear_Search.cpp
-        Searching-Algorithms/Algorithms/Linear_Search.h
-        Searching-Algorithms/Algorithms/main.cpp
-        Searching-Algorithms/Data/data_sets.json
-        Searching-Algorithms/LICENSE
-        Searching-Algorithms/README.md
+        Sedarch-Algorithms/Algorithms/Binary_Search.cpp
+        Sedarch-Algorithms/Algorithms/Binary_Search.h
+        Sedarch-Algorithms/Algorithms/Linear_Search.cpp
+        Sedarch-Algorithms/Algorithms/Linear_Search.h
+        Sedarch-Algorithms/Algorithms/main.cpp
+        Sedarch-Algorithms/Data/data_sets.json
+        Sedarch-Algorithms/README.md
         Sorting-Algorithms/Algorithms/Bubble_Sort.cpp
         Sorting-Algorithms/Algorithms/Bubble_Sort.h
         Sorting-Algorithms/Algorithms/Insertion_Sort.cpp
