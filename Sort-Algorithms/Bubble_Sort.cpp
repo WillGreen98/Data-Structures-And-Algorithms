@@ -16,6 +16,8 @@ Bubble_Sort::Bubble_Sort() {
 }
 
 void bubble_sort(std::vector<int> d[]) {
+    if(n == 1){ return; };
+
     for(int a=0; a < d->size(); a++) {
         for(int b=1; b < (d->size() - 1); b++) {
             if(d[a] > d[b]) {
@@ -25,4 +27,14 @@ void bubble_sort(std::vector<int> d[]) {
             }
         }
     }
+}
+
+void bubble_sort_recursive(std::vector<int> d[], int a) {
+    if(n == 1){ return; };
+
+    for(int a=0; a < d->size()-1; a++)
+        if(d[a] > d[a+1])
+            swap(d[a], d[a+1]);
+
+    bubble_sort_recursive(d, a);
 }

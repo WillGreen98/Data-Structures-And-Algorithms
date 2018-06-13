@@ -17,5 +17,6 @@ class Bubble_Sort {
 };
 
 void bubble_sort(std::vector<int> d[]);
+void bubble_sort_recursive(std::vector<int> d[]);
 
 #endif /* Bubble_Sort_hpp */
