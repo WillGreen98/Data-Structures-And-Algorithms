@@ -47,12 +47,12 @@ void merge(int d[], int left_wall, int middle_bound, int right_wall) {
     }
 }
 
-void mergeSort(int d[], int left_wall, int right_wall) {
+void merge_sort(int d[], int left_wall, int right_wall) {
     if(left_wall < right_wall) {
         int middle = left_wall + (right_wall-left_wall) / 2;
 
-        mergeSort(d, left_wall, middle);
-        mergeSort(d, middle + 1, right_wall);
+        merge_sort(d, left_wall, middle);
+        merge_sort(d, middle + 1, right_wall);
         merge(d, left_wall, middle, right_wall);
     }
 }
