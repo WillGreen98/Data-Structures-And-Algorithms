@@ -11,7 +11,7 @@ class Jump_Search {
         Jump_Search();
 };
 
-int linear_search(int d[], int x ,int index);
+int jump_search(int d[], int x, int index);
 
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_JUMP_SEARCH_H

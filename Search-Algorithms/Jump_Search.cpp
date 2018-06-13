@@ -10,7 +10,7 @@ Jump_Search::Jump_Search() {
     std::cout << "I am a Jump Search Algorithm" << std::endl;
 };
 
-int jumpSearch(int d[], int x, int index) {
+int jump_search(int d[], int x, int index) {
     int step = sqrt(index);
     int prev = 0;
 
