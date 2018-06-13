@@ -24,7 +24,7 @@
 #include "Sort-Algorithms/Selection_Sort.h"
 
 using json = nlohmann::json;
-std::ifstream data("/Data/data_sets.json");
+std::ifstream data("/Date-Sets/data_sets.json");
 
 int main(int argc, char * argv[]) {
     json json;
