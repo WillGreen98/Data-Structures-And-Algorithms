@@ -35,4 +35,4 @@ add_executable(Data_Structures_and_Algorithms
         Sorting-Algorithms/Data/data_sets.json
         Sorting-Algorithms/CMakeLists.txt
         Sorting-Algorithms/LICENSE
-        Sorting-Algorithms/README.md Search-Algorithms/Jump_Search.cpp Search-Algorithms/Jump_Search.h)
+        Sorting-Algorithms/README.md Search-Algorithms/Jump_Search.cpp Search-Algorithms/Jump_Search.h Data-Structures/Linked_List.cpp Data-Structures/Linked_List.h)
