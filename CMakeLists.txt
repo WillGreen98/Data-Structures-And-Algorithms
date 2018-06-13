@@ -12,22 +12,20 @@ include_directories(Sorting-Algorithms/cmake-build-debug)
 include_directories(Sorting-Algorithms/Data)
 
 add_executable(Data_Structures_and_Algorithms
-        Sedarch-Algorithms/Algorithms/Binary_Search.cpp
-        Sedarch-Algorithms/Algorithms/Binary_Search.h
-        Sedarch-Algorithms/Algorithms/Linear_Search.cpp
-        Sedarch-Algorithms/Algorithms/Linear_Search.h
-        Sedarch-Algorithms/Algorithms/main.cpp
-        Sedarch-Algorithms/Data/data_sets.json
-        Sedarch-Algorithms/README.md
-        Sorting-Algorithms/Algorithms/Bubble_Sort.cpp
-        Sorting-Algorithms/Algorithms/Bubble_Sort.h
-        Sorting-Algorithms/Algorithms/Insertion_Sort.cpp
-        Sorting-Algorithms/Algorithms/Insertion_Sort.h
-        Sorting-Algorithms/Algorithms/main.cpp
-        Sorting-Algorithms/Algorithms/Quick_Sort.cpp
-        Sorting-Algorithms/Algorithms/Quick_Sort.h
-        Sorting-Algorithms/Algorithms/Selection_Sort.cpp
-        Sorting-Algorithms/Algorithms/Selection_Sort.h
+        Sedarch-Algorithms/Binary_Search.cpp
+        Sedarch-Algorithms/Binary_Search.h
+        Sedarch-Algorithms/Linear_Search.cpp
+        Sedarch-Algorithms/Linear_Search.h
+        Sedarch-Algorithms/main.cpp
+        Sedarch-Algorithms/Data-Sets/data_sets.json
+        Sorting-Algorithms/Bubble_Sort.cpp
+        Sorting-Algorithms/Bubble_Sort.h
+        Sorting-Algorithms/Insertion_Sort.cpp
+        Sorting-Algorithms/Insertion_Sort.h
+        Sorting-Algorithms/Quick_Sort.cpp
+        Sorting-Algorithms/Quick_Sort.h
+        Sorting-Algorithms/Selection_Sort.cpp
+        Sorting-Algorithms/Selection_Sort.h
         Sorting-Algorithms/cmake-build-debug/cmake_install.cmake
         Sorting-Algorithms/cmake-build-debug/CMakeCache.txt
         Sorting-Algorithms/cmake-build-debug/Makefile
@@ -35,4 +33,12 @@ add_executable(Data_Structures_and_Algorithms
         Sorting-Algorithms/Data/data_sets.json
         Sorting-Algorithms/CMakeLists.txt
         Sorting-Algorithms/LICENSE
-        Sorting-Algorithms/README.md Search-Algorithms/Jump_Search.cpp Search-Algorithms/Jump_Search.h Data-Structures/Linked_List.cpp Data-Structures/Linked_List.h Sort-Algorithms/Merge_Sort.cpp Sort-Algorithms/Merge_Sort.h Sort-Algorithms/Heap_Sort.cpp Sort-Algorithms/Heap_Sort.h)
+        Sorting-Algorithms/README.md
+        Search-Algorithms/Jump_Search.cpp
+        Search-Algorithms/Jump_Search.h
+        Data-Structures/Linked_List.cpp
+        Data-Structures/Linked_List.h
+        Sort-Algorithms/Merge_Sort.cpp
+        Sort-Algorithms/Merge_Sort.h
+        Sort-Algorithms/Heap_Sort.cpp
+        Sort-Algorithms/Heap_Sort.h)
