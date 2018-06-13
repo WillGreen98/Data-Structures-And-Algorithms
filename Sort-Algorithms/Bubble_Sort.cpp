@@ -30,7 +30,7 @@ void bubble_sort(std::vector<int> d[]) {
 }
 
 void bubble_sort_recursive(std::vector<int> d[], int a) {
-    if(n == 1){ return; };
+    if(a == 1){ return; };
 
     for(int a=0; a < d->size()-1; a++)
         if(d[a] > d[a+1])
