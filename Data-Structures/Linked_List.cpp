@@ -12,16 +12,37 @@ Linked_List::Linked_List() {
 
 struct Node {
     int data;
-    struct Node *next;
+    struct Node *seq_next; // Singly
+    struct Node *seq_prev; // Doubly
 };
 
-void linked_list() {
-    struct Node* head = NULL;
-    struct Node* tail = NULL;
+class node_list {
+    private:
+        Node *head;
+        Node *tail;
+    public:
+        node_list() {
+            head = NULL;
+            tail = NULL;
+        }
 
-    head = (struct Node*)malloc(sizeof(struct Node));
-    tail = (struct Node*)malloc(sizeof(struct Node));
+    void node_initialisation(int d_value) {
+        struct Node *node = new node;
 
-    head->data = 1;
-    head->next = tail;
-}
+        node->data = d_value;
+        node->seq_prev = NULL;
+        node->seq_next = NULL;
+
+        if(head == NULL) {
+            head = node;
+            tail = node;
+            node = NULL;
+        } else {
+            tail->seq_prev = NULL;
+            tail->seq_next = node;
+            tail = node;
+        }
+    }
+};
+
+void linked_list() {}
