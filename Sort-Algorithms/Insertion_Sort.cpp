@@ -26,3 +26,19 @@ void insertion_sort(std::vector<int> d[]) {
         }
     }
 }
+
+void insertion_sort_recursive(std::vector<int> d[], int a) {
+    if(n <= 1) { return; }
+
+    insertion_sort_recursive(d, a-1);
+
+    int last = d[a-1];
+    int b = a-2;
+
+    while(b >= 0 && d[b] > last) {
+        a[b+1] = arr[b];
+        b--;
+    }
+
+    d[b+1] = last;
+}
