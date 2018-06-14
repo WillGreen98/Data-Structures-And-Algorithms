@@ -43,6 +43,16 @@ class node_list {
             tail = node;
         }
     }
+    
+    void display() {
+        Node *node = new Node();
+        node = head;
+
+        while(node != NULL) {
+            std::cout << node->data << std::endl;
+            node = node->data;
+        }
+    }
 };
 
 void linked_list() {}
