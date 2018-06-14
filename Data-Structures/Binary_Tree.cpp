@@ -44,3 +44,15 @@ struct Node *BST_insert(struct Node *node, int value) {
 
     return node;
 }
+
+int node_search(struct Node *node, int d_target) {
+    if(node == NULL) {
+        return false;
+    } else {
+        if(d_target < node->value) {
+            return node_search(node->left_branch, d_target);
+        } else {
+            return node_search(node->right_branch, d_target);
+        }
+    }
+}
