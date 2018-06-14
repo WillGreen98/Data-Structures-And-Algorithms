@@ -43,7 +43,16 @@ class node_list {
             tail = node;
         }
     }
-    
+
+    void node_start(int d_value) {
+        Node *node = new Node();
+
+        node->data = d_value;
+        node->seq_prev = NULL;
+        node->seq_next = head;
+        head = node;
+    }
+
     void display() {
         Node *node = new Node();
         node = head;
