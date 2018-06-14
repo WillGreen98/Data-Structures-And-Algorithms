@@ -41,4 +41,4 @@ add_executable(Data_Structures_and_Algorithms
         Sort-Algorithms/Merge_Sort.cpp
         Sort-Algorithms/Merge_Sort.h
         Sort-Algorithms/Heap_Sort.cpp
-        Sort-Algorithms/Heap_Sort.h)
+        Sort-Algorithms/Heap_Sort.h Data-Structures/Binary_Tree.cpp Data-Structures/Binary_Tree.h)

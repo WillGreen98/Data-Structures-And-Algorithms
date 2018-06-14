@@ -94,7 +94,7 @@ class node_list {
         return iterator;
     }
 
-    void display() {
+    void node_display() {
         Node *node = new Node();
         node = head;
 
