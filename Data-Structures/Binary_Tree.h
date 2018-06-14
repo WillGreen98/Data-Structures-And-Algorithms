@@ -11,6 +11,6 @@ class Binary_Tree {
         Binary_Tree();
 };
 
-void BST_inorder(struct Node *BST_Root)
+void BST_inorder(struct Node *BST_Root);
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_BINARY_TREE_H
