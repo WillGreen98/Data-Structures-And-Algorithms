@@ -56,3 +56,19 @@ int node_search(struct Node *node, int d_target) {
         }
     }
 }
+
+int node_size(struct Node *node) {
+    if(node == NULL) {
+        return 0;
+    } else {
+        return node_size(node->left_branch) + 1 + node_size(node->right_branch);
+    }
+}
+
+void node_display(struct Node *node) {
+    if(node == NULL) { return 0; }
+
+    node_display(node->right_branch);
+    std::cout << node->value;
+    node_display(node->right_branch);
+}
