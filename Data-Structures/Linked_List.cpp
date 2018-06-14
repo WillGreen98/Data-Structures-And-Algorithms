@@ -84,6 +84,16 @@ class node_list {
         previous_node->seq_next = current_node->seq_next;
     }
 
+    void node_get(int index) {
+        Node *iterator = new Node();
+
+        for(int i=0; i < index; i++) {
+            iterator = iterator->seq_next;
+        }
+
+        return iterator;
+    }
+
     void display() {
         Node *node = new Node();
         node = head;
