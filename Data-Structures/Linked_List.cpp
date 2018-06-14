@@ -60,7 +60,7 @@ class node_list {
 
         current_node = head;
 
-        for(int i = 1; i < index; i++) {
+        for(int i=1; i < index; i++) {
             previous_node = current_node;
             current_node = current_node->seq_next;
         }
@@ -68,6 +68,20 @@ class node_list {
         node->data = d_value;
         previous_node->seq_next = node;
         node->seq_next = current_node;
+    }
+
+    void node_delete(int index) {
+        Node *current_node = new Node();
+        Node *previous_node = new Node();
+
+        current_node = head;
+
+        for(int i=0; i < index; i++) {
+            previous_node = current_node;
+            current_node = current_node->seq_next;
+        }
+
+        previous_node->seq_next = current_node->seq_next;
     }
 
     void display() {
