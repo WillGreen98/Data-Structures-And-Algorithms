@@ -53,6 +53,23 @@ class node_list {
         head = node;
     }
 
+    void node_add(int index, int d_value) {
+        Node *node = new Node();
+        Node *current_node = new Node();
+        Node *previous_node = new Node();
+
+        current_node = head;
+
+        for(int i = 1; i < index; i++) {
+            previous_node = current_node;
+            current_node = current_node->seq_next;
+        }
+
+        node->data = d_value;
+        previous_node->seq_next = node;
+        node->seq_next = current_node;
+    }
+
     void display() {
         Node *node = new Node();
         node = head;
