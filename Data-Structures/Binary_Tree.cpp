@@ -12,8 +12,8 @@ Binary_Tree::Binary_Tree() {
 
 struct Node {
     int value;
-    struct Node *left_branch;
-    struct Node *right_branch;
+    struct Node *left_branch{};
+    struct Node *right_branch{};
 
     explicit Node(int value) {
         this->value = value;
