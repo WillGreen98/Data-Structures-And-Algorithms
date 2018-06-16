@@ -36,6 +36,7 @@ struct Node *NewNode(int d_value) {
     node->value = d_value;
     node->left_branch = node->right_branch = nullptr;
 
+    if(node->value == nullptr) { node->colour == BLACK; }
     return node;
 };
 

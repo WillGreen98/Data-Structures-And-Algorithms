@@ -28,6 +28,9 @@ add_executable(Data_Structures_and_Algorithms
         Search-Algorithms/Linear_Search.cpp
         Search-Algorithms/Linear_Search.h
 
+        Search-Algorithms/Graphs/Depth_First_Search.cpp
+        Search-Algorithms/Graphs/Depth_First_Search.h
+
         Sort-Algorithms/Bubble_Sort.cpp
         Sort-Algorithms/Bubble_Sort.h
         Sort-Algorithms/Heap_Sort.cpp
