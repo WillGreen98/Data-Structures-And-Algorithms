@@ -18,6 +18,8 @@ add_executable(Data_Structures_and_Algorithms
         Data-Structures/Binary_Tree.h
         Data-Structures/Linked_List.cpp
         Data-Structures/Linked_List.h
+        Data-Structures/Red_Black_Tree.cpp
+        Data-Structures/Red_Black_Tree.h
 
         Search-Algorithms/Binary_Search.cpp
         Search-Algorithms/Binary_Search.h

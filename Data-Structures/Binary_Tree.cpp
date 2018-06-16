@@ -14,31 +14,31 @@ struct Node {
     int value;
     struct Node *left_branch;
     struct Node *right_branch;
-    
-    Node(int value) {
+
+    explicit Node(int value) {
         this->value = value;
     }
 };
 
 struct Node *NewNode(int d_value) {
-    struct Node *node = new Node();
+    auto *node = new Node(5);
 
     node->value = d_value;
-    node->left_branch = node->right_branch = NULL;
+    node->left_branch = node->right_branch = nullptr;
 
     return node;
 };
 
-void BST_inorder(struct Node *BST_Root) {
-    if(BST_Root != NULL) {
+void BST_inorder(Node *BST_Root) {
+    if(BST_Root != nullptr) {
         BST_inorder(BST_Root->left_branch);
         std::cout << BST_Root->value;
         BST_inorder(BST_Root->left_branch);
     }
 }
 
-struct Node *BST_insert(struct Node *node, int value) {
-    if(node == NULL) return NewNode(value);
+struct Node *BST_insert(Node *node, int value) {
+    if(node == nullptr) return NewNode(value);
 
     if(value < node->value) {
         node->left_branch = BST_insert(node->left_branch, value);
@@ -49,8 +49,8 @@ struct Node *BST_insert(struct Node *node, int value) {
     return node;
 }
 
-int node_search(struct Node *node, int d_target) {
-    if(node == NULL) {
+int node_search(Node *node, int d_target) {
+    if(node == nullptr) {
         return false;
     } else {
         if(d_target < node->value) {
@@ -61,16 +61,16 @@ int node_search(struct Node *node, int d_target) {
     }
 }
 
-int node_size(struct Node *node) {
-    if(node == NULL) {
+int node_size(Node *node) {
+    if(node == nullptr) {
         return 0;
     } else {
         return node_size(node->left_branch) + 1 + node_size(node->right_branch);
     }
 }
 
-int node_display(struct Node *node) {
-    if(node == NULL) { return 0; }
+int node_display(Node *node) {
+    if(node == nullptr) { return 0; }
 
     node_display(node->right_branch);
     std::cout << node->value;
