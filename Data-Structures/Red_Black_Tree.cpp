@@ -61,6 +61,22 @@ Node *RBT_Uncle(Node *node) {
     return RBT_Sibling(node->parent);
 }
 
+void RBT_rotate_left(Node *node) {
+    struct Node *node_init = node->right_branch;
+    node->right_branch = node_init->left_branch;
+    node_init->left_branch = node;
+    node_init->parent = node->parent;
+    node->parent = node_init;
+}
+
+void RBT_rotate_right(Node *node) {
+    struct Node *node_init = node->left_branch;
+    node->left_branch = node_init->right_branch;
+    node_init->right_branch = node;
+    node_init->parent = node->parent;
+    node->parent = node_init;
+}
+
 bool RBT_balance(Node *node, int &height_max, int &height_min) {
     int left_height_max, left_height_min;
     int right_height_max, right_height_min;
