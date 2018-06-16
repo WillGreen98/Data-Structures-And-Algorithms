@@ -27,7 +27,7 @@ class node_list {
         }
 
     void node_initialisation(int d_value) {
-        struct Node *node = new node;
+        struct Node *node = new Node();
 
         node->data = d_value;
         node->seq_prev = NULL;
@@ -84,14 +84,14 @@ class node_list {
         previous_node->seq_next = current_node->seq_next;
     }
 
-    void node_get(int index) {
+    Node node_get(int index) {
         Node *iterator = new Node();
 
         for(int i=0; i < index; i++) {
             iterator = iterator->seq_next;
         }
 
-        return iterator;
+        return *iterator;
     }
 
     void node_display() {
@@ -100,7 +100,7 @@ class node_list {
 
         while(node != NULL) {
             std::cout << node->data << std::endl;
-            node = node->data;
+            node = reinterpret_cast<Node *>(node->data);
         }
     }
 };

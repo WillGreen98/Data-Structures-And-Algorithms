@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 
 #include "Heap_Sort.h"
 
@@ -19,16 +20,16 @@ void heap(int d[], int x, int index) {
     if(right_wall < x && d[right_wall] > d[largest]) {largest = right_wall; }
 
     if(largest != index) {
-        swap(d[index], d[largest]);
+        std::swap(d[index], d[largest]);
         heap(d, x, largest);
     }
 }
 
 void heap_sort(int d[], int x) {
-    for(int i = n / 2 - 1; i >= 0; i--) { heap(d, x, i); }
+    for(int i = x / 2 - 1; i >= 0; i--) { heap(d, x, i); }
 
-    for(int i = n-1; i >= 0; i--) {
-        swap(d[0], d[i]);
+    for(int i = x-1; i >= 0; i--) {
+        std::swap(d[0], d[i]);
         heap(d, i, 0);
     }
 }

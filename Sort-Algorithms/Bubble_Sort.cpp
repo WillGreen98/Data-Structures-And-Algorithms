@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 #include "Bubble_Sort.h"
 
@@ -15,8 +16,8 @@ Bubble_Sort::Bubble_Sort() {
     std::cout << "I am a Bubble Sort Algorithm" << std::endl;
 }
 
-void bubble_sort(std::vector<int> d[]) {
-    if(n == 1){ return; };
+void bubble_sort(std::vector<int> d[], int a) {
+    if(a == 1){ return; };
 
     for(int a=0; a < d->size(); a++) {
         for(int b=1; b < (d->size() - 1); b++) {

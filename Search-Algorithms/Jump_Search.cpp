@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "math.h"
 
 #include "Jump_Search.h"
 

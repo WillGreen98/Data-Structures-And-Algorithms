@@ -28,14 +28,14 @@ void merge(int d[], int left_wall, int middle_bound, int right_wall) {
             d[temp] = L[a];
             a++;
         } else {
-            d[k] = R[b];
+            d[temp] = R[b];
             b++;
         }
         temp++;
     }
 
     while(a < n1) {
-        d[k] = L[a];
+        d[temp] = L[a];
         a++;
         temp++;
     }

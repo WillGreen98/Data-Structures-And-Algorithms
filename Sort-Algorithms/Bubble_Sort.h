@@ -16,7 +16,7 @@ class Bubble_Sort {
         Bubble_Sort();
 };
 
-void bubble_sort(std::vector<int> d[]);
-void bubble_sort_recursive(std::vector<int> d[]);
+void bubble_sort(std::vector<int> d[], int a);
+void bubble_sort_recursive(std::vector<int> d[], int a);
 
 #endif /* Bubble_Sort_hpp */

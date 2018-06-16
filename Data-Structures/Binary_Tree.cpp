@@ -19,7 +19,7 @@ struct Node {
 struct Node *NewNode(int d_value) {
     struct Node *node = new Node();
 
-    node->key = d_value;
+    node->value = d_value;
     node->left_branch = node->right_branch = NULL;
 
     return node;
@@ -27,7 +27,7 @@ struct Node *NewNode(int d_value) {
 
 void BST_inorder(struct Node *BST_Root) {
     if(BST_Root != NULL) {
-        BST_Inorder(BST_Root->left_branch);
+        BST_inorder(BST_Root->left_branch);
         std::cout << BST_Root->value;
         BST_inorder(BST_Root->left_branch);
     }
@@ -65,7 +65,7 @@ int node_size(struct Node *node) {
     }
 }
 
-void node_display(struct Node *node) {
+int node_display(struct Node *node) {
     if(node == NULL) { return 0; }
 
     node_display(node->right_branch);
