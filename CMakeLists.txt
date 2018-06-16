@@ -46,4 +46,4 @@ add_executable(Data_Structures_and_Algorithms
 
         CMakeLists.txt
         main.cpp
-        )
+        Search-Algorithms/Graphs/Breadth_First_Search.cpp Search-Algorithms/Graphs/Breadth_First_Search.h)

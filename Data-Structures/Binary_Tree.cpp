@@ -37,6 +37,10 @@ void BST_inorder(Node *BST_Root) {
     }
 }
 
+void Binary_Tree::inorder() {
+
+}
+
 struct Node *BST_insert(Node *node, int value) {
     if(node == nullptr) return NewNode(value);
 

@@ -22,7 +22,6 @@ class Graph {
         void DFS();
 
     explicit Graph(std::vector<int> *adjacent_lists) : adjacent_lists(adjacent_lists) {}
-
 };
 
 Graph::Graph(int vertex) {
