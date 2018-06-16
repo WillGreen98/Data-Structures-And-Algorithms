@@ -40,9 +40,13 @@ struct Node *NewNode(int d_value) {
 };
 
 Node *RBT_GrandParent(Node *node) {
-    if(node == nullptr || node->parent == nullptr || node->parent->parent) { return node; }
+    if(node == nullptr || node->parent == nullptr || node->parent->parent == nullptr) { return node; }
 
     return node->parent->parent;
+}
+
+Node *RBT_Parent(Node *node) {
+    return node->parent;
 }
 
 Node *RBT_Sibling(Node *node) {
@@ -52,7 +56,7 @@ Node *RBT_Sibling(Node *node) {
 }
 
 Node *RBT_Uncle(Node *node) {
-    if(node == nullptr || node->parent == nullptr || node->parent->parent) { return node; }
+    if(node == nullptr || node->parent == nullptr || node->parent->parent == nullptr) { return node; }
 
     return RBT_Sibling(node->parent);
 }
