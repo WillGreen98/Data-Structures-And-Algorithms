@@ -13,13 +13,15 @@ Red_Black_Tree::Red_Black_Tree() {
     std::cout << "I am an example of a Red Black Tree" << std::endl;
 }
 
-enum Color {BLACK = (int) "\033[30m",
+enum Colour {BLACK = (int) "\033[30m",
             RED = (int) "\033[31m",
             RESET = (int) "\033[0m"
 };
 
 struct Node {
     int value;
+    enum Colour colour;
+    struct Node *parent;
     struct Node *left_branch{};
     struct Node *right_branch{};
 
@@ -36,6 +38,24 @@ struct Node *NewNode(int d_value) {
 
     return node;
 };
+
+Node *RBT_GrandParent(Node *node) {
+    if(node == nullptr || node->parent == nullptr || node->parent->parent) { return node; }
+
+    return node->parent->parent;
+}
+
+Node *RBT_Sibling(Node *node) {
+    if(node == nullptr || node->parent == nullptr) { return node; }
+
+    node == node->parent->left_branch ? node->parent->left_branch : node->parent->right_branch;
+}
+
+Node *RBT_Uncle(Node *node) {
+    if(node == nullptr || node->parent == nullptr || node->parent->parent) { return node; }
+
+    return RBT_Sibling(node->parent);
+}
 
 bool RBT_balance(Node *node, int &height_max, int &height_min) {
     int left_height_max, left_height_min;
