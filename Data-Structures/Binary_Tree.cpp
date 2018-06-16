@@ -14,6 +14,10 @@ struct Node {
     int value;
     struct Node *left_branch;
     struct Node *right_branch;
+    
+    Node(int value) {
+        this->value = value;
+    }
 };
 
 struct Node *NewNode(int d_value) {
