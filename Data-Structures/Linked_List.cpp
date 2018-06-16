@@ -22,23 +22,23 @@ class node_list {
         Node *tail;
     public:
         node_list() {
-            head = NULL;
-            tail = NULL;
+            head = nullptr;
+            tail = nullptr;
         }
 
     void node_initialisation(int d_value) {
-        struct Node *node = new Node();
+        Node *node = new Node();
 
         node->data = d_value;
-        node->seq_prev = NULL;
-        node->seq_next = NULL;
+        node->seq_prev = nullptr;
+        node->seq_next = nullptr;
 
-        if(head == NULL) {
+        if(head == nullptr) {
             head = node;
             tail = node;
-            node = NULL;
+            node = nullptr;
         } else {
-            tail->seq_prev = NULL;
+            tail->seq_prev = nullptr;
             tail->seq_next = node;
             tail = node;
         }
@@ -48,7 +48,7 @@ class node_list {
         Node *node = new Node();
 
         node->data = d_value;
-        node->seq_prev = NULL;
+        node->seq_prev = nullptr;
         node->seq_next = head;
         head = node;
     }
@@ -98,7 +98,7 @@ class node_list {
         Node *node = new Node();
         node = head;
 
-        while(node != NULL) {
+        while(node != nullptr) {
             std::cout << node->data << std::endl;
             node = reinterpret_cast<Node *>(node->data);
         }
