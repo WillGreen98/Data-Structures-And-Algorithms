@@ -20,9 +20,13 @@ add_executable(Data_Structures_and_Algorithms
         Data-Structures/Linked_List.h
         Data-Structures/Red_Black_Tree.cpp
         Data-Structures/Red_Black_Tree.h
+        Data-Structures/Stack.cpp
+        Data-Structures/Stack.h
 
         Search-Algorithms/Binary_Search.cpp
         Search-Algorithms/Binary_Search.h
+        Search-Algorithms/Graphs/Breadth_First_Search.cpp
+        Search-Algorithms/Graphs/Breadth_First_Search.h
         Search-Algorithms/Jump_Search.cpp
         Search-Algorithms/Jump_Search.h
         Search-Algorithms/Linear_Search.cpp
@@ -46,4 +50,4 @@ add_executable(Data_Structures_and_Algorithms
 
         CMakeLists.txt
         main.cpp
-        Search-Algorithms/Graphs/Breadth_First_Search.cpp Search-Algorithms/Graphs/Breadth_First_Search.h)
+        )
