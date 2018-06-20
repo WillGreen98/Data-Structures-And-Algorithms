@@ -16,7 +16,7 @@ struct Node {
 };
 
 template<typename T>
-Node *newNode(T *d_value) {
+Node *newNode(T d_value) {
     Node *node = new Node();
 
     node->d_value = *d_value;
@@ -28,33 +28,32 @@ Node *newNode(T *d_value) {
 template<typename T>
 class Stack_List {
     public:
-        static const int d_max[500];
-        T *d_value;
         int top;
 
         Stack_List() {
             top = -1;
         }
 
-    bool isEmpty() { return top < 0; }
-    bool isStacked_Max() { if(top == *d_max - 1) { return true; } }
+    bool isEmpty(Node *root) { return !root; }
+    int isStacked_Max(Node *root) { if(isEmpty(root)) {return root->d_value; } }
 
-    int pop() {
-        if(isEmpty()) {
-            std::cout << "Stack Underflow" << std::endl;
-            return 0;
-        } else {
-            this->d_value = (T *)d_max[top--];
-            return reinterpret_cast<int>(d_value);
-        }
+    int pop(Node **root) {
+        if(isEmpty(*root)) { return INT_MIN; }
+
+        Node *temp = *root;
+        *root = (*root)->next;
+
+        int popped = temp->d_value;
+        free(temp);
+
+        return popped;
     };
 
-    void push(T *d_value) {
-        if(isStacked_Max()) {
-            std::cout << "Stack Overflow" << std::endl;
-        } else {
-            *d_value = d_max[top++];
-        }
+    void push(Node **root, T d_value) {
+        auto *node = newNode(d_value);
+
+        node->next = *root;
+        *root = node;
     }
 };
 
