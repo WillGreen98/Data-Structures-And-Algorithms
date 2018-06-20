@@ -29,16 +29,13 @@ struct Node *NewNode(int d_value) {
     return node;
 };
 
-void BST_inorder(Node *BST_Root) {
+
+void Binary_Tree::inorder(Node *BST_Root) {
     if(BST_Root != nullptr) {
         BST_inorder(BST_Root->left_branch);
         std::cout << BST_Root->value;
         BST_inorder(BST_Root->left_branch);
     }
-}
-
-void Binary_Tree::inorder() {
-
 }
 
 struct Node *BST_insert(Node *node, int value) {

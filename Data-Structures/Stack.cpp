@@ -36,8 +36,12 @@ class Stack_List {
             top = -1;
         }
 
+    bool isEmpty() { return top < 0; }
+    bool isStacked_Max() { if(top == *d_max - 1) { return true; } }
+
     int pop() {
-        if(top < 0 ) {
+        if(isEmpty()) {
+            std::cout << "Stack Underflow" << std::endl;
             return 0;
         } else {
             this->d_value = (T *)d_max[top--];
@@ -45,16 +49,12 @@ class Stack_List {
         }
     };
 
-    bool push(T *d_value) {
-        if(top > *d_max) { // d_max is weird
-            return false;
+    void push(T *d_value) {
+        if(isStacked_Max()) {
+            std::cout << "Stack Overflow" << std::endl;
         } else {
             *d_value = d_max[top++];
-            return true;
         }
     }
-
-    bool isEmpty() { return top < 0; }
-    bool isStacked_Max() { if(top == *d_max - 1) { return true; } }
 };
 
