@@ -16,13 +16,13 @@ struct Node {
 };
 
 template<typename T>
-Node newNode(T *d_value) {
+Node *newNode(T *d_value) {
     Node *node = new Node();
 
     node->d_value = *d_value;
     node->next = nullptr;
 
-    return *node;
+    return node;
 };
 
 template<typename T>
@@ -55,5 +55,6 @@ class Stack_List {
     }
 
     bool isEmpty() { return top < 0; }
+    bool isStacked_Max() { if(top == *d_max - 1) { return true; } }
 };
 
