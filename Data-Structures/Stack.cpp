@@ -15,6 +15,11 @@ struct Node {
     struct Node *next;
 };
 
+struct Queue {
+    struct Node *stack_a;
+    struct Node *stack_b;
+};
+
 template<typename T>
 Node *newNode(T d_value) {
     Node *node = new Node();
@@ -37,13 +42,13 @@ class Stack_List {
     bool isEmpty(Node *root) { return !root; }
     int isStacked_Max(Node *root) { if(isEmpty(root)) {return root->d_value; } }
 
-    int pop(Node **root) {
+    T pop(Node **root) {
         if(isEmpty(*root)) { return INT_MIN; }
 
         Node *temp = *root;
         *root = (*root)->next;
 
-        int popped = temp->d_value;
+        T popped = temp->d_value;
         free(temp);
 
         return popped;
@@ -54,6 +59,15 @@ class Stack_List {
 
         node->next = *root;
         *root = node;
+    }
+
+    void enQueue(Queue queue, T d_value) {
+        push(&queue.stack_a, d_value);
+    }
+
+    T deQueue(Queue *queue) {
+        T d_value;
+        if(queue->stack_a == nullptr && queue->stack_b == nullptr) { }
     }
 };
 

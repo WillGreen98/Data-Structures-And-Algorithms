@@ -34,7 +34,41 @@ int main(int argc, char * argv[]) {
     std::vector<int> data_arr_two = json["data_sets"]["data_arr_two"];
     std::vector<int> data_arr_three = json["data_sets"]["data_arr_three"];
 
-    bubble_sort(&data_arr_one);
+    int usr_choice;
+    std::cout << "================ Menu ================" << std::endl;
+    std::cout << "What would you like to do: " << std::endl;
+    std::cout << "1. Data Structures" << std::endl;
+    std::cout << "2. Search Algorithms" << std::endl;
+    std::cout << "3. Sort Algorithms" << std::endl;
+    std::cin >> usr_choice;
+
+    if(usr_choice == 1) {
+        std::cout << "================ Data Structures ================" << std::endl;
+        std::cout << "Binary Tree" << std::endl;
+        std::cout << "Linked List" << std::endl;
+        std::cout << "Red Black Tree" << std::endl;
+        std::cout << "Stack" << std::endl;
+    }
+
+    if(usr_choice == 2) {
+        std::cout << "================ Search ================" << std::endl;
+        std::cout << "Binary Search" << std::endl;
+        std::cout << "Jump Search" << std::endl;
+        std::cout << "Linear Search" << std::endl;
+        std::cout << "Graphs: " << std::endl;
+        std::cout << "Breadth First Search" << std::endl;
+        std::cout << "Depth First Search" << std::endl;
+    }
+
+    if(usr_choice == 3) {
+        std::cout << "================ Sort ================" << std::endl;
+        std::cout << "Bubble Sort" << std::endl;
+        std::cout << "Heap Sort" << std::endl;
+        std::cout << "Insertion Sort" << std::endl;
+        std::cout << "Merge Sort" << std::endl;
+        std::cout << "Quick Sort" << std::endl;
+        std::cout << "Selection Sort" << std::endl;
+    }
 
     return 0;
 }
