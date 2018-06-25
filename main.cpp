@@ -12,6 +12,13 @@
 
 #include "nlohmann/json.hpp"
 
+#include "Data-Structures/Binary_Tree.h"
+#include "Data-Structures/Linked_List.h"
+#include "Data-Structures/Red_Black_Tree.h"
+#include "Data-Structures/Stack.h"
+
+#include "Search-Algorithms/Graphs/Breadth_First_Search.h"
+#include "Search-Algorithms/Graphs/Depth_First_Search.h"
 #include "Search-Algorithms/Binary_Search.h"
 #include "Search-Algorithms/Jump_Search.h"
 #include "Search-Algorithms/Linear_Search.h"
