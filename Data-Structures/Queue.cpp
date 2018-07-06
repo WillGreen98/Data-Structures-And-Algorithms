@@ -29,3 +29,33 @@ struct Queue *queue_list(unsigned capacity) {
 
     return queue;
 }
+
+int isEmpty(Queue *queue) { return queue->size == 0; }
+int isFull(Queue *queue) { return queue->size == queue->capacity; }
+
+void enqueue(Queue *queue, int value) {
+    if(isFull(queue)) { return; }
+
+    queue->back = (queue->back + 1) % queue->capacity;
+    queue->queue_array[queue->back] = value;
+    queue->size = queue->size + 1;
+}
+
+int dequeue(Queue *queue) {
+    if(isEmpty(queue)) { return INT8_MIN; }
+
+    int object = queue->queue_array[queue->front];
+    queue->front = queue->front = (queue->front + 1) % queue->capacity;
+    queue->size = queue->size - 1;
+    return object;
+}
+
+int get_front(Queue *queue) {
+    if(isEmpty(queue)) { return INT8_MIN; }
+    return queue->queue_array[queue->front];
+}
+
+int get_rear(Queue *queue) {
+    if(isEmpty(queue)) { return INT8_MIN; }
+    return queue->queue_array[queue->back];
+}
