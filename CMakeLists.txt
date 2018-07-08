@@ -52,4 +52,4 @@ add_executable(Data_Structures_and_Algorithms
 
         CMakeLists.txt
         main.cpp
-        )
+        Data-Structures/Heap/Binary_Heap.cpp Data-Structures/Heap/Binary_Heap.h)
