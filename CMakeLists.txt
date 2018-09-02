@@ -16,6 +16,8 @@ add_executable(Data_Structures_and_Algorithms
 
         Data-Structures/Binary_Tree.cpp
         Data-Structures/Binary_Tree.h
+        Data-Structures/Heap/Binary_Heap.cpp
+        Data-Structures/Heap/Binary_Heap.h
         Data-Structures/Linked_List.cpp
         Data-Structures/Linked_List.h
         Data-Structures/Queue.cpp
@@ -51,5 +53,4 @@ add_executable(Data_Structures_and_Algorithms
         Sort-Algorithms/Selection_Sort.h
 
         CMakeLists.txt
-        main.cpp
-        Data-Structures/Heap/Binary_Heap.cpp Data-Structures/Heap/Binary_Heap.h)
+        main.cpp)

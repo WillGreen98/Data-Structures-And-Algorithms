@@ -11,7 +11,7 @@ Queue::Queue() {
 }
 
 template<typename T>
-struct Queue {
+struct Queue_Object {
     T size;
     T front;
     T back;
