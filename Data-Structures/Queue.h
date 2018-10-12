@@ -8,7 +8,7 @@
 
 class Queue {
     public:
-        Queue::Queue();
+
 };
 
 

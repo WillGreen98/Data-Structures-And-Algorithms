@@ -6,10 +6,6 @@
 
 #include "Queue.h"
 
-Queue::Queue() {
-    std::cout << "I am an example of a Queue" << std::endl;
-}
-
 template<typename T>
 struct Queue_Object {
     T size;
@@ -20,8 +16,8 @@ struct Queue_Object {
 };
 
 template<typename T>
-struct Queue *queue_list(unsigned capacity) {
-    Queue *queue = new Queue();
+struct Queue *Queue_list(unsigned capacity) {
+    Queue_Object<T> queue = new Queue_Object<T>();
     queue->capacity = capacity;
     queue->front = queue->size = 0;
     queue->back = capacity - 1;
@@ -30,10 +26,13 @@ struct Queue *queue_list(unsigned capacity) {
     return queue;
 }
 
-int isEmpty(Queue *queue) { return queue->size == 0; }
-int isFull(Queue *queue) { return queue->size == queue->capacity; }
+template<typename T>
+int isEmpty(Queue_Object<T> *queue) { return queue->size == 0; }
+template<typename T>
+int isFull(Queue_Object<T> *queue) { return queue->size == queue->capacity; }
 
-void enqueue(Queue *queue, int value) {
+template<typename T>
+void enqueue(Queue_Object<T> *queue, int value) {
     if(isFull(queue)) { return; }
 
     queue->back = (queue->back + 1) % queue->capacity;
@@ -41,7 +40,8 @@ void enqueue(Queue *queue, int value) {
     queue->size = queue->size + 1;
 }
 
-int dequeue(Queue *queue) {
+template<typename T>
+int dequeue(Queue_Object<T> *queue) {
     if(isEmpty(queue)) { return INT8_MIN; }
 
     int object = queue->queue_array[queue->front];
@@ -50,12 +50,14 @@ int dequeue(Queue *queue) {
     return object;
 }
 
-int get_front(Queue *queue) {
+template<typename T>
+int get_front(Queue_Object<T> *queue) {
     if(isEmpty(queue)) { return INT8_MIN; }
     return queue->queue_array[queue->front];
 }
 
-int get_rear(Queue *queue) {
+template<typename T>
+int get_rear(Queue_Object<T> *queue) {
     if(isEmpty(queue)) { return INT8_MIN; }
     return queue->queue_array[queue->back];
 }
